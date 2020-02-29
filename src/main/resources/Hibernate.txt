@@ -94,3 +94,5 @@ variables and reference them from outside the entity class itself . The
         https://www.geeksforgeeks.org/equals-hashcode-methods-java/
 •class that acts as an identifier must implement equals hashCode
 based on the id values
+
+https://en.wikipedia.org/wiki/View_(SQL)
