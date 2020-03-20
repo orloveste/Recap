@@ -25,19 +25,26 @@ public class HalfSearch {
     }
     public static void main(String args[])
     {
-        int arr[] = {10,18,19,20,25,28,48,55,62,70};
+        int arr[] = {33,10,18,12,2,3,19,20,25,28,48,55,62,70};
         Scanner reader = new Scanner(System.in);
-        int key = 48;
+        int key;
         System.out.print("Enter your key: ");
         key = reader.nextInt();
-        int n = arr.length-1;
+        int n = arr.length;
         int index = binarySearch(arr,0, n, key);
-        System.out.println("The sorted array is: ");
+
+        System.out.println("The unsorted array is: ");
         for(int i=0; i < n ;i++)
         {
             System.out.print(arr[i] + " ");
         }
         System.out.println("\nElement to be searched: "+ key);
+
+        System.out.println("Sorted array: ");
+        for (int i = 0; i < arr.length; i++){
+            System.out.print(arr[i]+ " ");
+        }
+        System.out.println();
         if (index == -1)
             System.out.println("Unfortunately the Element is not found!");
         else
