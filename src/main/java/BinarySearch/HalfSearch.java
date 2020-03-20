@@ -1,5 +1,6 @@
 package BinarySearch;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class HalfSearch {
@@ -41,6 +42,9 @@ public class HalfSearch {
         System.out.println("\nElement to be searched: "+ key);
 
         System.out.println("Sorted array: ");
+        Arrays.sort(arr);
+        System.out.println(Arrays.toString(arr));
+
         for (int i = 0; i < arr.length; i++){
             for (int j = 0; j < arr.length -1 -i; j++){
                 if (arr[j] > arr[j+1]){
