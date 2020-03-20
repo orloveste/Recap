@@ -1,5 +1,7 @@
 package BinarySearch;
 
+import java.util.Scanner;
+
 public class HalfSearch {
     public static int binarySearch(int arr[], int low, int high, int key)
     {
@@ -19,17 +21,16 @@ public class HalfSearch {
             }
             mid = (low + high)/2;
         }
-        if ( low > high )
-        {
-            return -1;
-        }
         return -1;
     }
     public static void main(String args[])
     {
         int arr[] = {10,18,19,20,25,28,48,55,62,70};
+        Scanner reader = new Scanner(System.in);
         int key = 48;
-        int n=arr.length-1;
+        System.out.print("Enter your key: ");
+        key = reader.nextInt();
+        int n = arr.length-1;
         int index = binarySearch(arr,0, n, key);
         System.out.println("The sorted array is: ");
         for(int i=0; i < n ;i++)
