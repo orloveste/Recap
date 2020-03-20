@@ -31,36 +31,24 @@ public class HalfSearch {
         int key;
         System.out.print("Enter your key: ");
         key = reader.nextInt();
-        int n = arr.length -1;
-        int index = binarySearch(arr,0, n, key);
+        int n = arr.length;
 
         System.out.println("The unsorted array is: ");
         for(int i=0; i < n ;i++)
         {
             System.out.print(arr[i] + " ");
         }
+
         System.out.println("\nElement to be searched: "+ key);
 
         System.out.println("Sorted array: ");
         Arrays.sort(arr);
         System.out.println(Arrays.toString(arr));
 
-        for (int i = 0; i < arr.length; i++){
-            for (int j = 0; j < arr.length -1 -i; j++){
-                if (arr[j] > arr[j+1]){
-                    n = arr[j];
-                    arr[j]= arr[j+1];
-                    arr[j+1]=n;
-                }
-            }
-        }
-        for (int i = 0; i < arr.length; i++){
-            System.out.print(arr[i]+ " ");
-        } //todo search in sorted array workablabblable
-        System.out.println();
+        int index = binarySearch(arr,0, n, key);
         if (index == -1)
             System.out.println("Unfortunately the Element is not found!");
         else
-            System.out.println("The Element is found at the index: "+index);
+            System.out.println("The Element is found at the index: "+(index+1));
     }
 }
