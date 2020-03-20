@@ -30,7 +30,7 @@ public class HalfSearch {
         int key;
         System.out.print("Enter your key: ");
         key = reader.nextInt();
-        int n = arr.length;
+        int n = arr.length -1;
         int index = binarySearch(arr,0, n, key);
 
         System.out.println("The unsorted array is: ");
@@ -42,8 +42,17 @@ public class HalfSearch {
 
         System.out.println("Sorted array: ");
         for (int i = 0; i < arr.length; i++){
-            System.out.print(arr[i]+ " ");
+            for (int j = 0; j < arr.length -1 -i; j++){
+                if (arr[j] > arr[j+1]){
+                    n = arr[j];
+                    arr[j]= arr[j+1];
+                    arr[j+1]=n;
+                }
+            }
         }
+        for (int i = 0; i < arr.length; i++){
+            System.out.print(arr[i]+ " ");
+        } //todo search in sorted array workablabblable
         System.out.println();
         if (index == -1)
             System.out.println("Unfortunately the Element is not found!");
