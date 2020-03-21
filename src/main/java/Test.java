@@ -12,6 +12,13 @@ public class Test {
         System.out.println("true = " + true);
         System.out.println("false = " + false);
         System.out.println("args = " + args);
-
     }
 }
+//basic
+//ceva
+//Test.main
+//args = []
+//28293 = 28293
+//true = true
+//false = false
+//args = [Ljava.lang.String;@4b1210ee
