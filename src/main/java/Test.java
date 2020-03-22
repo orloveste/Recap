@@ -12,7 +12,7 @@ public class Test {
         System.out.println(x);
 
         doSomethingLocally();
-        System.out.println(y);// no go like this
+       // System.out.println(y);// no go like this
     }
     static void doSOmething(){
         x= 10;//else value
