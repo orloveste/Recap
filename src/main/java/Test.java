@@ -1,24 +1,23 @@
-import java.io.PrintStream;
-import java.util.Arrays;
+//scope
 
 public class Test {
-
+    static int x; //declaring
+    //static int y; // for use in exterior of the method
+    
     public static void main(String[] args) {
-        System.out.println("basic");
-        System.out.printf("ceva\n");
-        System.out.println("Test.main");
-        System.out.println("args = " + Arrays.deepToString(args));
-        System.out.println("28293 = " + 28293);
-        System.out.println("true = " + true);
-        System.out.println("false = " + false);
-        System.out.println("args = " + args);
+        x = 5;//asign value to x
+        System.out.println("x = " + x);
+
+        doSOmething();
+        System.out.println(x);
+
+        doSomethingLocally();
+        System.out.println(y);// no go like this
+    }
+    static void doSOmething(){
+        x= 10;//else value
+    }
+    static void doSomethingLocally(){
+        int y= 100;//declare and initialization y, lives just in this method
     }
 }
-//basic
-//ceva
-//Test.main
-//args = []
-//28293 = 28293
-//true = true
-//false = false
-//args = [Ljava.lang.String;@4b1210ee
