@@ -1,4 +1,4 @@
-package Udemy;
+package Udemy.tutorials.basic;
 
 
 import java.util.Scanner;

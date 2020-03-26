@@ -1,4 +1,4 @@
-package Udemy;
+package Udemy.tutorials.basic;
 // 11
 public class AccessModifiers {
     private int x;

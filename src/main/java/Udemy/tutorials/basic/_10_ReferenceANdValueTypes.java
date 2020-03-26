@@ -1,4 +1,4 @@
-package Udemy;
+package Udemy.tutorials.basic;
 
 public class _10_ReferenceANdValueTypes {
     private static int number;
