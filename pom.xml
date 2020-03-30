@@ -58,6 +58,14 @@
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-spring-di</artifactId>
         </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-spring-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-amazon-lambda-http</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
