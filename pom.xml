@@ -10,9 +10,87 @@
 
     <properties>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <quarkus.version>1.0.1.Final</quarkus.version>
         <maven.compiler.source>1.8</maven.compiler.source>
+
+<!--        <plugin>-->
+<!--            <groupId>io.quarkus</groupId>-->
+<!--            <artifactId>quarkus-maven-plugin</artifactId>-->
+<!--            <version>${quarkus.version}</version>-->
+
+<!--            <configuration>-->
+<!--                <source>${maven.compiler.source}</source>-->
+<!--                <target>${maven.compiler.target}</target>-->
+<!--                <compileArgs>-->
+<!--                    <arg>&#45;&#45;enable-preview</arg>-->
+<!--                </compileArgs>-->
+<!--                <jvmArgs>&#45;&#45;enable-preview</jvmArgs>-->
+<!--            </configuration>-->
+<!--        </plugin>-->
+<!--        <plugin>-->
+<!--            <groupId>io.quarkus</groupId>-->
+<!--            <artefactId>quarkus-bootstrap-maven-plugin</artefactId>-->
+<!--            <version>${quarkus.version}</version>-->
+<!--        </plugin>-->
     </properties>
 
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-bom</artifactId>
+            <version>${quarkus.version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>io.quarkus</groupId>
+                <artifactId>quarkus-maven-plugin</artifactId>
+                <version>${quarkus.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>build</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    <profiles>
+        <profile>
+            <id>native</id>
+            <properties>
+                <quarkus.package.type>native</quarkus.package.type>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-failsafe-plugin</artifactId>
+                        <version>${surefire-plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>integration-test</goal>
+                                    <goal>verify</goal>
+                                </goals>
+                                <configuration>
+                                    <systemProperties>
+                                        <native.image.path>${project.build.directory}/${project.build.finalName}-runner</native.image.path>
+                                    </systemProperties>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk-lambda -->
@@ -41,6 +119,7 @@
             <artifactId>hibernate-core</artifactId>
             <version>5.3.15.Final</version>
         </dependency>
+
     </dependencies>
 
 
