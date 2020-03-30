@@ -11,7 +11,7 @@ public class Subclass extends Base {
 
     @Override
     public void sayHi() {
-        super.sayHi();
+        //super.sayHi();
         System.out.println("Hi super");
     }
 }
