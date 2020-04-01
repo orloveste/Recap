@@ -1,8 +1,13 @@
 package Udemy.Game;
 
 public abstract class GameObject {
+    public abstract void draw();
+
     public static void main(String[] args) {
-        Player player = new Player();
+        GameObject player = new Player();
+        player.draw();
+        GameObject menu = new Menu();
+        menu.draw();
         //GameObject mwObject = new GameObject();
     }
 }
