@@ -16,6 +16,15 @@ public class Car {
 
     int numberOfPeopleInCar =1;
 
+    //math f(x) = x+1;
+    //x=5; f(5) =5+1=6;
+    //f(x,y,z) = x+1/z-y;
+    public Car(int customMaxSpeed, double customWeight, boolean customIsTheCarOn){
+        maxSpeed = customMaxSpeed;
+        weight = customWeight;
+        isTheCarOn = customIsTheCarOn;
+    }
+
     public void printVariables(){
         System.out.println("This is the maxSpeed "+ maxSpeed);
         System.out.println(minSpeed);
@@ -30,10 +39,11 @@ public class Car {
     }
 
     public static void main(String[] args) {
-        Car familyCar = new Car();
-        System.out.println("family's car: ");
-        familyCar.printVariables();
-        familyCar.upgradeMinSpeed();
-        familyCar.printVariables();
+        System.out.println("Birthday car");
+        Car birthdayPresent = new Car(180, 2700.3, true);
+        birthdayPresent.printVariables();
+        System.out.println("Cristmas car");
+        Car cristmasPresent = new Car(220, 200, false);
+        cristmasPresent.printVariables();
     }
 }
