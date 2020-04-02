@@ -32,18 +32,46 @@ public class Car {
         System.out.println(isTheCarOn);
         System.out.println(condition);
         System.out.println(nameOfCar);
+        System.out.println(numberOfPeopleInCar);
     }
     public void upgradeMinSpeed(){
         minSpeed = maxSpeed;
         maxSpeed = maxSpeed+1;
     }
 
+    public void getIn(){
+        numberOfPeopleInCar++;
+    }
+    public void getOut(){
+        //if (numberOfPeopleInCar == 0) {
+            numberOfPeopleInCar--;
+        //}
+    }
+    public double howManyKmOutOffGas(){
+        return currentFuel*lon100km;
+    }
+    public double maxKmPerFillUp(){
+        return maxFuel*lon100km;
+    }
+
     public static void main(String[] args) {
-        System.out.println("Birthday car");
+
         Car birthdayPresent = new Car(180, 2700.3, true);
+        System.out.println("Birthday car v1");
         birthdayPresent.printVariables();
-        System.out.println("Cristmas car");
+        birthdayPresent.getIn();
+        birthdayPresent.getIn();
+        birthdayPresent.getIn();
+        System.out.println("km ramasi: "+ birthdayPresent.howManyKmOutOffGas());
+        System.out.println("max km: "+birthdayPresent.maxKmPerFillUp());
+        System.out.println("Birthday car v2");
+        birthdayPresent.printVariables();
+        birthdayPresent.getOut();
+        System.out.println("Birthday car v3");
+        birthdayPresent.printVariables();
+
+        /*System.out.println("Cristmas car");
         Car cristmasPresent = new Car(220, 200, false);
-        cristmasPresent.printVariables();
+        cristmasPresent.printVariables();*/
     }
 }
