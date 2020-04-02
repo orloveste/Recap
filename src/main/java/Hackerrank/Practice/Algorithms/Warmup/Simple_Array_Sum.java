@@ -4,11 +4,10 @@ import java.util.Arrays;
 
 public class Simple_Array_Sum {
     static int simpleArraySum(int[] ar) {
-        int lenAr = ar.length;
+       // int lenAr = ar.length;
         int sum = 0;
-        for (int i=0; i<lenAr; i++){
-            sum += ar[i];
-        }return sum;
+        for (int value : ar) sum += value;
+        return sum;
     }
 
 
