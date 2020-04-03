@@ -25,9 +25,10 @@ public class Sock_Merchant {
         //toDo reader key and put in array for sorting pairs
         int[] ar = new int[]{10, 20, 20, 10, 10, 30, 50, 10, 20,30,20,10,20};
         int n = ar.length;
-        while (reader.hasNext()){
+
+        /*while (reader.hasNext()){
             ar[n] =reader.nextInt();
-        } reader.close();
+        } reader.close();*/ //not inspired today, #badHairDay:)
 
         System.out.println(Arrays.toString(ar));
         int result = sockMerchant(n, ar);
