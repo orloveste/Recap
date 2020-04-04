@@ -5,8 +5,9 @@ import java.util.Random;
 public class Day03 {
     public String randomNumber(){
         Random random = new Random();
-        int n = Math.abs(random.nextInt());
-        if (1<=n&& n <=100) { //toDo constrain up
+//        int n = Math.abs(0 < random.nextInt() <=100); no go
+        int n = Math.abs(random.nextInt(101));
+       // for (int n = Math.abs(random.ints(1,100))) no go
             System.out.print(n + " ");
 
             n %= 2;
@@ -15,8 +16,6 @@ public class Day03 {
             } else {
                 return "Not Weird - odd";
             }
-        }
-        return null; //print null if is not in constrain
     }
 
     static String weird(){
@@ -26,6 +25,12 @@ public class Day03 {
 
     public static void main(String[] args) {
        Day03 game = new Day03();
+        System.out.println(game.randomNumber());
+        System.out.println(game.randomNumber());
+        System.out.println(game.randomNumber());
+        System.out.println(game.randomNumber());
+        System.out.println(game.randomNumber());
+        System.out.println(game.randomNumber());
         System.out.println(game.randomNumber());
         System.out.println(game.randomNumber());
         System.out.println(game.randomNumber());
