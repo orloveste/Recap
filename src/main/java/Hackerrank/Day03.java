@@ -8,25 +8,25 @@ public class Day03 {
         Random random = new Random();
         int n = Math.abs(random.nextInt(101));
         System.out.print(MessageFormat.format("{0} ", n));
-//        n %= 2;
-        String answer= "";
-        if( n % 2 == 1 ) {
-            answer = weird();
-        }
-        else {
-            if  (2 <= n && n <= 5) answer = notWeird();
-            else if (6 <= n && n <= 20) answer = weird();
-            else if( 20 < n) answer = notWeird();
+        String answer = "";
+
+        switch (n % 2) {
+            case 1:
+                answer = weird();
+                break;
+            default:
+                if ( 2 <= n && n <= 5 ) answer = notWeird();
+                else if ( 6 <= n && n <= 20 ) answer = weird();
+                else if ( 20 < n ) answer = notWeird();
+                break;
         }
         return  answer;
     }
 
     private static String weird(){
-        //System.out.println("Weird");
         return "Weird";
     }
     private static String notWeird(){
-        //System.out.println("Weird");
         return "Not Weird";
     }
 
