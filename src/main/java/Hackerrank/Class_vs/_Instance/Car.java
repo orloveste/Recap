@@ -30,8 +30,8 @@ public class Car {
         return this.maxSpeed;
     }
 
-    public void setMaxSpeed(int maxSpeed) {
-        this.maxSpeed = maxSpeed;
+    public void setMaxSpeed(int newMaxSpeed) {
+        this.maxSpeed = newMaxSpeed;
     }
 
     public int getMinSpeed() {
@@ -55,9 +55,8 @@ public class Car {
         System.out.println(nameOfCar);
         System.out.println(numberOfPeopleInCar);
     }
-    public void upgradeMinSpeed(){
-        minSpeed = maxSpeed;
-        maxSpeed = maxSpeed+1;
+    public void upgradeMaxSpeed(){
+        setMaxSpeed(getMaxSpeed()+10);
     }
 
     public void getIn(){
