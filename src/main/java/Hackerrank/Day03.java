@@ -8,31 +8,26 @@ public class Day03 {
         Random random = new Random();
         int n = Math.abs(random.nextInt(101));
         System.out.print(MessageFormat.format("{0} ", n));
-        n %= 2;
-        if( n == 0 ){
-            if (2 <= n && n <= 5)  {
-                System.out.println("Not Weird 2-if");
-            }
-            else if (6 <= n && n <= 20) {
-                System.out.println("Weird else-if1");
-            }
-            else if( 20 < n) {
-                System.out.println("Not Weird else-if2");
-            }
-            return null;
+//        n %= 2;
+        String answer= "";
+        if( n % 2 == 1 ) {
+            answer = weird();
         }
         else {
-            return "Weird - odd";
+            if  (2 <= n && n <= 5) answer = notWeird();
+            else if (6 <= n && n <= 20) answer = weird();
+            else if( 20 < n) answer = notWeird();
         }
-
+        return  answer;
     }
-//    public int condition1(){
-//
-//    }
 
-    static String weird(){
-        System.out.println("Weird");
-        return weird();
+    private static String weird(){
+        //System.out.println("Weird");
+        return "Weird";
+    }
+    private static String notWeird(){
+        //System.out.println("Weird");
+        return "Not Weird";
     }
 
     public static void main(String[] args) {
