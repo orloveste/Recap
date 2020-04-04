@@ -1,22 +1,24 @@
 package Hackerrank;
 
+import java.text.MessageFormat;
 import java.util.Random;
 
 public class Day03 {
-    public String randomNumber(){
+    public String randomNumber() {
         Random random = new Random();
-//        int n = Math.abs(0 < random.nextInt() <=100); no go
         int n = Math.abs(random.nextInt(101));
-       // for (int n = Math.abs(random.ints(1,100))) no go
-            System.out.print(n + " ");
-
-            n %= 2;
-            if (n == 0) {
-                return "Weird - even";
-            } else {
-                return "Not Weird - odd";
-            }
+        System.out.print(MessageFormat.format("{0} ", n));
+        n %= 2;
+        if ( (2 <= n && n <= 5)||((n < 20) && (n == 0)) ) {
+            return "Not Weird - even";
+        }
+        else {//toDo even nr 6-20 will be here
+            return "Weird - odd";
+        }
     }
+//    public int condition1(){
+//
+//    }
 
     static String weird(){
         System.out.println("Weird");
