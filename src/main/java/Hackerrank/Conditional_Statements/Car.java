@@ -1,5 +1,5 @@
-package Types_and_Variables;
-
+package Hackerrank.Conditional_Statements;
+//toDo https://www.hackerrank.com/challenges/30-conditional-statements/tutorial
 public class Car {
     int maxSpeed = 100;
     int minSpeed = 0;
@@ -14,7 +14,8 @@ public class Car {
     double currentFuel = 20;
     double lon100km = 6.1;
 
-    int numberOfPeopleInCar =1;
+    int numberOfPeopleInCar = 1;
+    int maxNumberOfPeopleInCar = 5;
 
     //math f(x) = x+1;
     //x=5; f(5) =5+1=6;
@@ -23,6 +24,10 @@ public class Car {
         maxSpeed = customMaxSpeed;
         weight = customWeight;
         isTheCarOn = customIsTheCarOn;
+    }
+
+    public Car() {
+
     }
 
     public void printVariables(){
@@ -40,12 +45,20 @@ public class Car {
     }
 
     public void getIn(){
-        numberOfPeopleInCar++;
+        if (numberOfPeopleInCar < maxNumberOfPeopleInCar){
+            numberOfPeopleInCar++;
+            System.out.println("Someone got in");
+        }else {
+            System.out.println("The car is full! "+ numberOfPeopleInCar+ " = "+ maxNumberOfPeopleInCar);
+        }
     }
     public void getOut(){
-        //if (numberOfPeopleInCar == 0) {
+        if (numberOfPeopleInCar > 0) {
             numberOfPeopleInCar--;
-        //}
+            System.out.println("Someone get out");
+        } else {
+            System.out.println("No one is in the car "+ numberOfPeopleInCar);
+        }
     }
     public double howManyKmOutOffGas(){
         return currentFuel*lon100km;
@@ -54,21 +67,28 @@ public class Car {
         return maxFuel*lon100km;
     }
 
+    public void turnTheCarOn(){
+        if (!isTheCarOn){
+            isTheCarOn = true;
+        }else {
+            System.out.println("car is already on "+ isTheCarOn);
+        }
+    }
     public static void main(String[] args) {
 
-        Car birthdayPresent = new Car(180, 2700.3, true);
-        System.out.println("Birthday car v1");
-        birthdayPresent.printVariables();
-        birthdayPresent.getIn();
-        birthdayPresent.getIn();
-        birthdayPresent.getIn();
-        System.out.println("km ramasi: "+ birthdayPresent.howManyKmOutOffGas());
-        System.out.println("max km: "+birthdayPresent.maxKmPerFillUp());
-        System.out.println("Birthday car v2");
-        birthdayPresent.printVariables();
-        birthdayPresent.getOut();
-        System.out.println("Birthday car v3");
-        birthdayPresent.printVariables();
+        Car uber = new Car();
+        uber.getOut();
+        uber.getOut();
+        uber.getIn();
+        uber.getIn();
+        uber.getIn();
+        uber.getIn();
+        uber.getIn();
+        uber.getIn();
+        uber.turnTheCarOn();
+        uber.turnTheCarOn();
+
+
 
         /*System.out.println("Cristmas car");
         Car cristmasPresent = new Car(220, 200, false);

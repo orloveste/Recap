@@ -1,14 +1,23 @@
 package Hackerrank;
 
-import java.util.Scanner;
-
 public class Day03 {
-    private static final Scanner scanner = new Scanner(System.in);
+
+
+    static void weird(){
+        System.out.println("Weird");
+    }
 
     public static void main(String[] args) {
-        int N = scanner.nextInt();
-        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
-        scanner.close();
+        int N = 0;
+//        if ((N / 2 != 0)&&(2<=N<=5 )){
+//
+//
+//            weird();
+//
+//        } else {
+//            System.out.print("Not ");
+//            weird();
+//        }
     }
 }
