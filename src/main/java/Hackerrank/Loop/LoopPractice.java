@@ -17,11 +17,9 @@ public class LoopPractice {
         } while (x < 10);
     }
     public static void practiceForLoop(){
-        for (int x =0; x < 20; x++){
+        for (int x = 10; x > 0; x--){
             System.out.println("For Value of x is "+x);
-            if ( x == 10 ) {
-                break;
-            }
+
         }
         System.out.println("The end!");
     }
