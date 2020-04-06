@@ -89,7 +89,23 @@ public class MadLibs {
 
     }
 
-    public static void main(String[] args) {
+    public void printInstruction(){
+        System.out.println("Welcome to the MadLibs game. If you type in " +
+                "words, we'll give you a story. Start typing in a name.");
+    }
+    public void putTogetherTheStory(){
+        String story = "Jesse and her best fiend "+getName()+
+                " went to Disney Land today! They saw a "+ getNoun1() +
+                " in a show at the Magic Kingdom and ate a "+getAdjective1()+
+                " feast for dinner. The next day I ran "+ getAdverb()+
+                " to meet Mickey Mouse in his "+ getNoun2()+
+                "and then that night I gazed at the "+ getRandomNums()+
+                " "+getAdjective2()+ " fireworks shooting from the "+getNoun3()+ ".";
+        setStory(story);
+    }
 
+    public static void main(String[] args) {
+        MadLibs game = new MadLibs();
+        game.printInstruction();
     }
 }
