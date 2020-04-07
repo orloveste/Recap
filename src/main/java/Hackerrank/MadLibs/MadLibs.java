@@ -86,13 +86,14 @@ public class MadLibs {
     }
 
     public void setRandomNums() {
-        int num = Math.abs(random.nextInt())%100;
+        int num = Math.abs(random.nextInt()) % 100;
         int index = 0;
         int[] numberHolder = new int [3];
         while (index < numberHolder.length){
-            numberHolder[index] =num +index;
+            numberHolder[index] = num +index;
             index++;
-        } randomNums = "not "+numberHolder[0]+", not "+numberHolder[1]+", but "+numberHolder[3];
+        }
+        randomNums = "not "+numberHolder[0]+", not "+numberHolder[1]+", but "+numberHolder[2];
     }
 
     public void printInstruction(){
@@ -123,7 +124,7 @@ public class MadLibs {
         setAdjective2(scanner.nextLine());
     }
     public void enterAdverb(){
-        System.out.println("Give it me baby a adverb");
+        System.out.println("Give it me baby, a adverb please...");
         setAdverb(scanner.nextLine());
     }
     public void putTogetherTheStory(){
@@ -157,9 +158,13 @@ public class MadLibs {
         enterNoun2();
         enterAdverb();
         enterNoun3();
+        setRandomNums();
+        putTogetherTheStory();
+        System.out.println(getStory());
     }
     public static void main(String[] args) {
         MadLibs game = new MadLibs();
         game.printInstruction();
+        game.play();
     }
 }
