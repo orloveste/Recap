@@ -2,7 +2,8 @@ package Hackerrank;
 
 import java.util.Arrays;
 
-import static com.google.common.primitives.Ints.reverse;
+import static jdk.nashorn.internal.objects.NativeArray.reverse;
+
 
 //Day 7: Arrays
 public class Day07 {
