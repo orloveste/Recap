@@ -21,22 +21,17 @@ public class Day08 {
         System.out.println("PhoneBook entry: "+ phoneBook.toString());
 
         System.out.print("type 'exit' or Check name: ");
-        while(true){
-            if ( !in.hasNext() ) break;
-            for (int i = n; i >= 0; i--){
-                String s = in.next();
-                if (s.equals("exit") ){
-                    break;
-                }
-                else if ( phoneBook.containsKey(s) ) {
-                    System.out.println(s+"="+phoneBook.get(s));
-                }
-                else {
-                    System.out.println("Not found");
-                }
-            } break;
-
+        while(in.hasNext()){
+            String s = in.next();
+            if (s.equals("exit") ){
+             break;
+            }
+            if ( phoneBook.containsKey(s) ) {
+                System.out.println(s+"="+phoneBook.get(s));
+            }
+            else {
+                System.out.println("Not found");
+            }
         }
-
     }
 }
