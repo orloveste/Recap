@@ -25,6 +25,7 @@ public class DictionaryPractice {
         englSpanDictionary.put("Sunday", "Domingo");
         System.out.println("keys: "+ englSpanDictionary.keySet());
         System.out.println("Values: "+ englSpanDictionary.values());
+        System.out.println(englSpanDictionary.toString());
         System.out.println("size of dictionary is: "+englSpanDictionary.size());
 
         Map<String, Boolean> shoppingList = new HashMap<String, Boolean>();
@@ -38,6 +39,10 @@ public class DictionaryPractice {
         System.out.println("You need bread? = "+ shoppingList.get("Bread"));
         System.out.println(shoppingList.keySet());
         System.out.println(shoppingList.values());
+
+        System.out.println("Maped: "+ shoppingList.toString());
+        shoppingList.clear();
+        System.out.println("Clear list? ="+ shoppingList.toString());
 
     }
 }
