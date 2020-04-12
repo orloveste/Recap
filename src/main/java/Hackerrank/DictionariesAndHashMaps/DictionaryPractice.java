@@ -26,5 +26,18 @@ public class DictionaryPractice {
         System.out.println("keys: "+ englSpanDictionary.keySet());
         System.out.println("Values: "+ englSpanDictionary.values());
         System.out.println("size of dictionary is: "+englSpanDictionary.size());
+
+        Map<String, Boolean> shoppingList = new HashMap<String, Boolean>();
+        shoppingList.put("Ham", true);
+        shoppingList.put("Bread", Boolean.FALSE);
+        shoppingList.put("Oreos", Boolean.TRUE);
+        shoppingList.put("Eggs", false);
+        shoppingList.put("Sugar", true);
+
+        System.out.println("you need ham? ="+ shoppingList.get("Ham"));
+        System.out.println("You need bread? = "+ shoppingList.get("Bread"));
+        System.out.println(shoppingList.keySet());
+        System.out.println(shoppingList.values());
+
     }
 }
