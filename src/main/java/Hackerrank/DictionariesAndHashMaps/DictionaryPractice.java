@@ -13,11 +13,12 @@ public class DictionaryPractice {
         englSpanDictionary.put("Thursday", "Jueves");
         englSpanDictionary.put("Friday", "Viernes");
 
-        System.out.println(englSpanDictionary.get("Monday"));
+       /* System.out.println(englSpanDictionary.get("Monday"));
         System.out.println(englSpanDictionary.get("Tuesday"));
         System.out.println(englSpanDictionary.get("Wednesday"));
         System.out.println(englSpanDictionary.get("Thursday"));
-        System.out.println(englSpanDictionary.get("Friday"));
+        System.out.println(englSpanDictionary.get("Friday"));*/
+        System.out.println(englSpanDictionary.keySet());
 
     }
 }
