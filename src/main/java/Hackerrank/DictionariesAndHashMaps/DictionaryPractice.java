@@ -42,6 +42,10 @@ public class DictionaryPractice {
 
         System.out.println("Maped: "+ shoppingList.toString());
         System.out.println("Is emplty? = "+ shoppingList.isEmpty());
+        shoppingList.remove("Eggs");
+        System.out.println("removed list: "+shoppingList.toString());
+
+
         shoppingList.clear();
         System.out.println("Clear list? ="+ shoppingList.toString());
         System.out.println("Is emplty? = "+ shoppingList.isEmpty());
