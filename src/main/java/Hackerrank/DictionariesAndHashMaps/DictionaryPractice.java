@@ -44,6 +44,9 @@ public class DictionaryPractice {
         System.out.println("Is emplty? = "+ shoppingList.isEmpty());
         shoppingList.remove("Eggs");
         System.out.println("removed list: "+shoppingList.toString());
+        shoppingList.replace("Bread",Boolean.FALSE, Boolean.TRUE);
+        System.out.println("replace value and list: "+shoppingList.toString());
+
 
 
         shoppingList.clear();
