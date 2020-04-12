@@ -19,6 +19,7 @@ public class DictionaryPractice {
         System.out.println(englSpanDictionary.get("Thursday"));
         System.out.println(englSpanDictionary.get("Friday"));*/
 //        System.out.println("keys: "+ englSpanDictionary.keySet());
-        System.out.println("Values: "+ englSpanDictionary.values());
+//        System.out.println("Values: "+ englSpanDictionary.values());
+        System.out.println("size of dictionary is: "+englSpanDictionary.size());
     }
 }
