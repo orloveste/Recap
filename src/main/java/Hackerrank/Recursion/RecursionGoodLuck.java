@@ -14,6 +14,7 @@ public class RecursionGoodLuck {
 //    f(30) = 5 + 30 = 35
 //    f(f(f(20))) = f(f(25)) = f(30) = 35
 
+//    5+4+3+2+1
 
     public static void main(String[] args) {
 
