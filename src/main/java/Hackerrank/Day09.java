@@ -1,8 +1,5 @@
 package Hackerrank;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Day09 {
@@ -17,19 +14,14 @@ public class Day09 {
 
     private static final Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args) throws IOException {
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
-
+    public static void main(String[] args) {
+        System.out.print("Enter number: ");
         int n = scanner.nextInt();
-        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
 
         int result = Factorial(n);
 
-        bufferedWriter.write(String.valueOf(result));
-        bufferedWriter.newLine();
+        System.out.println("factorial is: "+ result);
 
-        bufferedWriter.close();
-
-        scanner.close();
     }
 }
