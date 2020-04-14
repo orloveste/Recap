@@ -7,11 +7,11 @@ import java.util.Scanner;
 
 public class Day09 {
     // Complete the factorial function below.
-    public static int factorial(int n) {
+    public static int Factorial(int n) {
         if (n == 1 || n == 0) {
             return 1;
         } else {
-            return n * factorial(n - 1);
+            return n * Factorial(n - 1);
         }
     }
 
@@ -23,7 +23,7 @@ public class Day09 {
         int n = scanner.nextInt();
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
-        int result = factorial(n);
+        int result = Factorial(n);
 
         bufferedWriter.write(String.valueOf(result));
         bufferedWriter.newLine();
