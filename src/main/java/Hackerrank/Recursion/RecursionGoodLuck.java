@@ -44,6 +44,21 @@ public class RecursionGoodLuck {
         }
     }
 
+    // 5^3 = 5 * 5 * 5
+    // 5^3 = 5 * 5^2 = 5 * 5 * 5^1 = 5 * 5 * 5 * 5^0 = 5 * 5 * 5 * 1
+    public static int exponentiation(int n, int p){
+        if ( p <= 0 ){ // base case
+            return 1;
+        }
+        else { // recursive
+//            5 * exponentiation(5, 2)
+//            5 * 5 * exponentiation(5,1)
+//            5 * 5 * 5 * exponentiation(5,0)
+//            5 * 5 * 5 * 1
+            return n * exponentiation(n, p-1);
+        }
+    }
+
     public static void main(String[] args) {
         System.out.println(Summation(3));
 
